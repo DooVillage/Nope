@@ -77,7 +77,7 @@ namespace Nop.Data
         /// </returns>
         public static async Task<DataSettings> LoadSettingsAsync(string filePath = null, bool reloadSettings = false, INopFileProvider fileProvider = null)
         {
-            if (!reloadSettings && Singleton<DataSettings>.Instance != null)
+            if (Singleton<DataSettings>.Instance != null)
                 return Singleton<DataSettings>.Instance;
 
             fileProvider ??= CommonHelper.DefaultFileProvider;
