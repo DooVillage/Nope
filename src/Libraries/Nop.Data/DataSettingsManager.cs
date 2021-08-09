@@ -139,7 +139,7 @@ namespace Nop.Data
         /// <returns>Data settings</returns>
         public static DataSettings LoadSettings(string filePath = null, bool reloadSettings = false, INopFileProvider fileProvider = null)
         {
-            if (!reloadSettings && Singleton<DataSettings>.Instance != null)
+            if (Singleton<DataSettings>.Instance != null)
                 return Singleton<DataSettings>.Instance;
 
             fileProvider ??= CommonHelper.DefaultFileProvider;
