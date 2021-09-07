@@ -81,8 +81,10 @@ namespace Nop.Services.Helpers
             if ((string.IsNullOrEmpty(crawlerOnlyUserAgentStringsPath) || _fileProvider.FileExists(crawlerOnlyUserAgentStringsPath)) && !needSaveCrawlerOnly)
                 return;
 
+            var tempFile = Path.GetTempFileName();
+            Console.WriteLine(tempFile);
             //try to write crawlers file
-            using var sw = new StreamWriter(crawlerOnlyUserAgentStringsPath);
+            using var sw = new StreamWriter(tempFile);
             var root = new XElement("browsercapitems");
 
             foreach (var crawler in crawlerItems)
