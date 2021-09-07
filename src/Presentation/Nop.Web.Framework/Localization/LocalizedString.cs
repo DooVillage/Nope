@@ -11,9 +11,9 @@ namespace Nop.Web.Framework.Localization
         /// Ctor
         /// </summary>
         /// <param name="localized">Localized value</param>
-        public LocalizedString(string localized): base (localized)
+        public LocalizedString(string localized): base (localized.Replace("'", "’"))
         {
-            Text = localized;
+            Text = localized.Replace("'", "’");
         }
         
         /// <summary>
