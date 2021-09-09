@@ -30,7 +30,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Areas\Admin\sitemap.config" />
     <EmbeddedResource Include="App_Data\**" />
-<!--    <EmbeddedResource Remove="App_Data\Localization\Installation\installation.pt-BR.xml" />-->
   </ItemGroup>
 
   <ItemGroup>
