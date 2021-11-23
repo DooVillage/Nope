@@ -40,4 +40,11 @@
     <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="5.0.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="package.json" />
+    <None Include="package.json" />
+    <Content Remove="package-lock.json" />
+    <None Include="package-lock.json" />
+  </ItemGroup>
+
 </Project>
